@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             iitc-plugin-wetterbericht-portals@dazz
 // @name           iitc: wetterbericht-portals-pdm
-// @version        0.1.4
+// @version        0.1.5
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
 // @updateURL      https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht-portals-pdm.user.js
 // @downloadURL    https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht-portals-pdm.user.js
@@ -65,6 +65,9 @@ function wrapper() {
           'd5fe07b5f5bf4ac485b53fb403237e27.12', // Nauener Tor 1972
           'cff942509f494aa2a411ff98d2e80a6d.12', // Detail on Nauener Tor
           'fccb8ce35c88456cbb166bc9c939484d.11', // Nauener Tor
+          '46af2efc70c54ff0a21eb052843f673e.11', // plastik - inge
+          '0ea34a42b5fb4a67816dab97e3e59db8.11', // Alter Stadtkanal
+          'c63f624a1085415ea62a0f06c66d2e8d.11', // Fliegender Holländer
         ]
       },
       'BB': {
@@ -75,6 +78,10 @@ function wrapper() {
           '6db4235242e044a8b25c716b0b45cbb8.11', // Neptun
           'e57a9aa905304b158e264f542b5c1e36.11', // Backsteintor
           '7df3410f21004e3e94e1e218e00b540c.11', // Bahnhof Babelsberg
+          'e60bb72f6c7c45df9774c308d8228ce1.11', // Babelsberg - Soldier
+          '2c2a158a09654d0095d43410c344ad51.11', // Plantagenplatz
+          'f44af283c8e4452b89e192b06a276ba7.11', // St. Antonius
+          '9d4f9a0992394d308367112aaaffad57.11', // Rathaus Babelsberg
         ]
       },
       'GB': {
@@ -128,6 +135,7 @@ function wrapper() {
           '61e2189fe51747a5b3005355de755700.12', // Potsdam, Sanssouci.
           '83f9e9fde0c340e3908ff5a286884f90.12', // Sculpture, Sanssouci Park
           '53706d6336e14a6cb0e9f79c510a978c.12', // Sphinx etwas bitter
+          'd9dad090a39b4933be7dbf2259d41441.11', // Rückseite Schloss Sanssouci
         ]
       },
       'NP': {
