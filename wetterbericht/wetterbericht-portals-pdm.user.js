@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             iitc-plugin-wetterbericht-portals@dazz
 // @name           iitc: wetterbericht-portals-pdm
-// @version        0.1.5
+// @version        0.1.6
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
 // @updateURL      https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht-portals-pdm.user.js
 // @downloadURL    https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht-portals-pdm.user.js
@@ -27,7 +27,7 @@ function wrapper() {
   window.plugin.wetterberichtportals.city.potsdam = function() {
     return {
       'areas': [ // select area(s) you want to see
-        'CP', 'BB', 'GB', 'PS', 'NP'
+        'CP', 'FI', 'BB', 'GB', 'PS', 'NP'
       ],
       'CP': {
         'portals': [
@@ -38,20 +38,13 @@ function wrapper() {
           '8e92ba87560a4ecc916cbb67ee5aa8c7.12', // Am alten Markt
           'b453a47575a74755b7d5f40702789757.12', // Störende Plastik I (nicht mehr
           '1f1b789e95cf42e5a960f70ad0d0042d.12', // Lustgarten - Potsdam
-          'a2b0b35a57bf4924927c72e793d63cfe.12', // Paar II
-          '16cafacece364ce69b8a8f7d930ac08b.12', // Störende Plastik III (nicht me
           '29d2f70a0f8b4ab48b273a35398c88ab.12', // Potsdam-04   (ha_rk@gmx.net)
           'a39931f8e8674e778068f0e35c11097d.12', // Berlin
           'fd2c4813fc894fdd8981477108ca466c.12', // Heavenly music
           'cafe041d481e468d95270abb5a149876.12', // Rathaus (alter Markt)
-          'cc477a9a07554ef1b763639c634d5ad8.12', // Regen
           'e1b9b1fee337411e8137bcb29ac876b1.12', // Potsdam-05   (ha_rk@gmx.net)
           '835a07a3c5124cda92e4352a22e7a0db.12', // Am neuen Markt
           '32b758be05e2442bace8ad029875bd28.12', // Potsdam, Alter Markt
-          '2d7eb8327a7f4c3eaec2bfee1d7ee23e.12', // Pause
-          'd69f1aaab5b041eb87d2c560dbf0e4ae.12', // Brunnen - Freundschaftsinsel
-          '21b1d7a0f7554ca28f950c13a6aac40c.12', // aufstrebend I
-          '4d6f5ddf9cda42c5b0e0b78475eb7a9e.12', // aufstrebend II
           '9335ac1869a64eeba02d35c3a0402e70.11', // Bürgerhaus am Eck
           'bca1c5dadee949eeb636cd73c962a511.11', // Basilika im Nebel
           'a463d9dfd1ff4a7a8b7cc7b99badd543.11', // Kämpferruhe
@@ -65,9 +58,20 @@ function wrapper() {
           'd5fe07b5f5bf4ac485b53fb403237e27.12', // Nauener Tor 1972
           'cff942509f494aa2a411ff98d2e80a6d.12', // Detail on Nauener Tor
           'fccb8ce35c88456cbb166bc9c939484d.11', // Nauener Tor
-          '46af2efc70c54ff0a21eb052843f673e.11', // plastik - inge
           '0ea34a42b5fb4a67816dab97e3e59db8.11', // Alter Stadtkanal
           'c63f624a1085415ea62a0f06c66d2e8d.11', // Fliegender Holländer
+        ]
+      },
+      'FI': {
+        'portals': [
+          '2d7eb8327a7f4c3eaec2bfee1d7ee23e.12', // Pause
+          'd69f1aaab5b041eb87d2c560dbf0e4ae.12', // Brunnen - Freundschaftsinsel
+          'cc477a9a07554ef1b763639c634d5ad8.12', // Regen
+          'a2b0b35a57bf4924927c72e793d63cfe.12', // Paar II
+          '16cafacece364ce69b8a8f7d930ac08b.12', // Störende Plastik III (nicht me
+          '46af2efc70c54ff0a21eb052843f673e.11', // plastik - inge
+          '21b1d7a0f7554ca28f950c13a6aac40c.12', // aufstrebend I
+          '4d6f5ddf9cda42c5b0e0b78475eb7a9e.12', // aufstrebend II
         ]
       },
       'BB': {
