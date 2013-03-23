@@ -1,10 +1,10 @@
 // ==UserScript==
 // @id             iitc-plugin-wetterbericht@dazz
 // @name           iitc: wetterbericht
-// @version        0.1.2
+// @version        0.1.4
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
-// @updateURL      https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht.user.js
-// @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht.user.js
+// @updateURL      https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht.user.js
+// @downloadURL    https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht.user.js
 // @description    wetterbericht
 // @include        *://www.ingress.com/intel*
 // @match          *://www.ingress.com/intel*
@@ -24,7 +24,7 @@ function wrapper() {
   };
 
   window.plugin.wetterbericht.setupCallback = function() {
-    $('#toolbox').append('<a onclick="window.plugin.wetterbericht.show()">wetterbericht</a> ');
+    $('#toolbox').append('<a onclick="window.plugin.wetterbericht.show()">Wetterbericht</a> ');
     $('#toolbox').append('<div id="iwb-schick"></div>');
     addHook('portalDataLoaded', window.plugin.wetterbericht.portalDataLoaded);
   };
@@ -35,7 +35,7 @@ function wrapper() {
 
     var p = data.portals;
 
-    var citydata = window.plugin.wetterberichtportals.city['berlin']();
+    var citydata = window.plugin.wetterberichtportals.city['potsdam']();
     var areas = citydata.areas;
     $.each(areas, function(ind, area) {
       var area_data;
@@ -125,7 +125,7 @@ function wrapper() {
     var s = 'Der Wetterbericht für ' + window.plugin.wetterbericht.datetime() + '\n';
     var forXml = 'id,portals,resist_portals,resist_level,resist_ap,entlight_portals,entlight_level,entlight_ap' + '\n'; // PDL,5,4,1.09,7k,0,0.00,0k
     $.each(window.plugin.wetterbericht.result, function(area, area_data) {
-      var anzP = window.plugin.wetterberichtportals.city['berlin']()[area].portals.length;
+      var anzP = window.plugin.wetterberichtportals.city['potsdam']()[area].portals.length;
       s += '[' + area + '|' + anzP + ']:';
       forXml += area + ','+anzP;
       $.each(area_data, function(faction, value) {
@@ -152,7 +152,7 @@ function wrapper() {
     var areaValues = '';
     var areaAnzP = '&anzP=';
     $.each(window.plugin.wetterbericht.result, function(area, area_data) {
-      var anzP = window.plugin.wetterberichtportals.city['berlin']()[area].portals.length;
+      var anzP = window.plugin.wetterberichtportals.city['potsdam']()[area].portals.length;
       areaAnzP += anzP + ',';
       areas += area + ',';// + anzP + ',';
       areaValues += '&' + area + '=';
@@ -166,7 +166,7 @@ function wrapper() {
     leString += areas + areaValues + areaAnzP;
 
     $('#iwb-schick').detach();
-    $('#toolbox').append('<a id="iwb-schick" target="new" href="'+ leString +'">schick</a> ');
+    $('#toolbox').append('<a id="iwb-schick" target="new" href="'+ leString +'">WB schick</a> ');
   };
 
   var setup = window.plugin.wetterbericht.setup;
